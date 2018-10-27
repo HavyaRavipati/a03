@@ -304,3 +304,7 @@
 ::1 - - [27/Oct/2018:17:38:47 +0000] "GET /info HTTP/1.1" 200 3128 "http://localhost:8081/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36"
 ::1 - - [27/Oct/2018:17:38:55 +0000] "GET /tictactoe HTTP/1.1" 200 2988 "http://localhost:8081/info" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36"
 ::1 - - [27/Oct/2018:17:38:57 +0000] "GET /index HTTP/1.1" 404 144 "http://localhost:8081/tictactoe" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36"
+::1 - - [27/Oct/2018:17:42:01 +0000] "GET / HTTP/1.1" 200 2638 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36"
+::1 - - [27/Oct/2018:17:42:06 +0000] "GET /Scripts/jquery-1.9.1.js HTTP/1.1" 404 162 "http://localhost:8081/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36"
+::1 - - [27/Oct/2018:17:42:06 +0000] "GET /Scripts/bootstrap.js HTTP/1.1" 404 159 "http://localhost:8081/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36"
+::1 - - [27/Oct/2018:17:42:08 +0000] "GET /info HTTP/1.1" 200 3067 "http://localhost:8081/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36"
