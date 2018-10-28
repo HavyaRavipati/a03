@@ -57,6 +57,12 @@ h1{
     text-align: center;
     
 }
+p{
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 50px;
+    text-align: center;
+}
 
 .button{
     margin-left: 30px;

@@ -1,19 +1,19 @@
 
 let gameBoard;
-let playerOne = "";
-let playerTwo = "";
-const winOptions = [[11,12,13], [21,22,23], [31,32,33], [11,22,33], [13,22,31], [13,23,33], [12,22,32], [11,21,31]];
+let player_1 = "";
+let player_2 = "";
+const winOptions = [[0,1,2], [3,4,5], [6,7,8], [0,4,8], [2,4,6], [0,3,6], [1,4,7], [2,5,8]];
 const cells = document.querySelectorAll(".cell");
 function startGame(value) {
   if (value === "X") 
   {
-    playerOne = "X";
-    playerTwo = "O";
+    player_1 = "X";
+    player_2 = "O";
   } 
   else 
   {
-    playerOne = "O";
-    playerTwo = "X";
+    player_1 = "O";
+    player_2 = "X";
   }
   document.querySelector(".chooseMark").style.display = "none";
   document.querySelector(".endGame").style.display = "none";
@@ -33,8 +33,8 @@ function replay()
 function takeTurn(square) 
 {
   if (typeof gameBoard[square.target.id] === "number") {
-    cellSelection(square.target.id, playerOne);
-    if (!checkTie()) cellSelection(bestSpot(), playerTwo);
+    cellSelection(square.target.id, player_1);
+    if (!checkTie()) cellSelection(bestSpot(), player_2);
   }
 }
 function cellSelection(squareId, player) 
@@ -64,13 +64,13 @@ function gameOver(winner)
 {
   for (let index of winOptions[winner.index]) 
   {
-    document.getElementById(index).style.backgroundColor = winner.player === playerOne ? "yellow" : "blue";
+    document.getElementById(index).style.backgroundColor = winner.player === player_1 ? "yellow" : "blue";
   }
   for (let i = 0; i < cells.length; i++) 
   {
     cells[i].removeEventListener("click", takeTurn, false);
   }
-  declareWinner(winner.player === playerOne ? "You Win!" : "You Lose!");
+  declareWinner(winner.player === player_1 ? "You Win!" : "You Lose!");
 }
 function declareWinner(player) 
 {
@@ -84,7 +84,7 @@ function emptySquares()
 }
 function bestSpot() 
 {
-  return minimax(gameBoard, playerTwo).index;
+  return minimax(gameBoard, player_2).index;
 }
 function checkTie() 
 {
@@ -104,10 +104,10 @@ function minimax(newBoard, player)
 {
   var availSpots = emptySquares(newBoard);
 
-  if (verifyBoard(newBoard, playerOne)) 
+  if (verifyBoard(newBoard, player_1)) 
   {
     return { score: -10 };
-  } else if (verifyBoard(newBoard, playerTwo)) {
+  } else if (verifyBoard(newBoard, player_2)) {
     return { score: 10 };
   } else if (availSpots.length === 0) {
     return { score: 0 };
@@ -118,11 +118,14 @@ function minimax(newBoard, player)
     move.index = newBoard[availSpots[i]];
     newBoard[availSpots[i]] = player;
 
-    if (player === playerTwo) {
-      let aiResult = minimax(newBoard, playerOne);
+    if (player === player_2)
+    {
+      let aiResult = minimax(newBoard, player_1);
       move.score = aiResult.score;
-    } else {
-      let result = minimax(newBoard, playerTwo);
+    } 
+    else 
+    {
+      let result = minimax(newBoard, player_2);
       move.score = result.score;
     }
 
@@ -131,7 +134,7 @@ function minimax(newBoard, player)
     moves.push(move);
   }
   let bestMove;
-  if (player === playerTwo) {
+  if (player === player_2) {
     let ptbestScore = -10000;
     for (var j = 0; j < moves.length; j++) {
       if (moves[j].score > ptbestScore) {

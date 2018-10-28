@@ -6,13 +6,13 @@
         <form action="action_page.php">
       
           <label for="fname">Name</label>
-          <input type="text" id="fname" name="Name" placeholder="Your first and last name...">
+          <input type="text" id="fname" name="Name" placeholder="Your first and last name..." required>
       
           <label for="lname">Email.ID</label>
-          <input type="text" id="EmailID" name="EmailID" placeholder="Your EmailID in @xyz.com...">
+          <input type="email" id="EmailID" name="EmailID" placeholder="Your EmailID in @xyz.com..." required>
       
           <label for="country">Where are you from</label>
-          <select id="country" name="country">
+          <select id="country" name="country" required> 
             <option value="usa">---Select---</option>
             <option value="australia">Australia</option>
             <option value="canada">Canada</option>
@@ -25,7 +25,7 @@
           <label for="subject">Subject</label>
           <input type="text" id="Subject" name="subject" placeholder="Subject...">
           <label for="Message">Your Message</label>
-          <textarea id="message" name="message" placeholder="Whats on your mind?" style="height:200px"></textarea>
+          <textarea id="message" name="message" placeholder="Whats on your mind?" style="height:200px" required></textarea>
       
           <input type="submit" value="Submit">
       
