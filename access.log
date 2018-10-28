@@ -382,3 +382,7 @@
 ::1 - - [27/Oct/2018:18:52:39 +0000] "GET /tictactoe HTTP/1.1" 304 - "http://localhost:8081/info" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36"
 ::1 - - [27/Oct/2018:18:52:40 +0000] "GET /info HTTP/1.1" 304 - "http://localhost:8081/tictactoe" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36"
 ::1 - - [27/Oct/2018:18:52:41 +0000] "GET /contact HTTP/1.1" 404 146 "http://localhost:8081/info" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36"
+::1 - - [28/Oct/2018:01:36:54 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36"
+::1 - - [28/Oct/2018:01:36:57 +0000] "GET /tictactoe HTTP/1.1" 304 - "http://localhost:8081/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36"
+::1 - - [28/Oct/2018:01:37:53 +0000] "GET /info HTTP/1.1" 304 - "http://localhost:8081/tictactoe" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36"
+::1 - - [28/Oct/2018:01:37:57 +0000] "GET /tictactoe HTTP/1.1" 304 - "http://localhost:8081/info" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36"

@@ -2,7 +2,7 @@
 let gameBoard;
 let playerOne = "";
 let playerTwo = "";
-const winOptions = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]];
+const winOptions = [[11,12,13], [21,22,23], [31,32,33], [11,22,33], [13,22,31], [13,23,33], [12,22,32], [11,21,31]];
 const cells = document.querySelectorAll(".cell");
 function startGame(value) {
   if (value === "X") 
